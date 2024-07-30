@@ -1,4 +1,6 @@
-.header-box{
+@import './breakpoints';
+
+.header-box {
     width: 100%;
     height: 100px;
     background-color: #FFFFFF;
@@ -7,7 +9,7 @@
     align-items: center;
 }
 
-.header-items-box{
+.header-items-box {
     width: 1286px;
     height: 41px;
     display: flex;
@@ -16,27 +18,43 @@
     margin: 50px;
 }
 
-.header-icons-box{
+.header-icons-box {
     height: 24px;
     width: fit-content;
     gap: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & img {
+        max-height: 24px;
+    }
 }
 
-.header-icons-box img{
-    max-height: 24px;
-}
-
-.header-text-box{
+.header-text-box {
     width: 430px;
     height: 24px;
     display: flex;
     justify-content: space-between;
 }
 
-.header-logo-box{
+.header-logo-box {
     width: 185px;
     height: 41px;
 }
+
+@include desktop {
+
+        .header-text-box {
+            display: none;
+        }
+        .header-icons-box{
+            display: none;
+        }
+        .header-logo-box{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
