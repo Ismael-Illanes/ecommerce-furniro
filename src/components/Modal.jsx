@@ -1,10 +1,6 @@
-import React from 'react'
-import '../styles/modal.scss'
+import React from "react";
+import "../styles/modal.scss";
 
 export default function Modal() {
-  return (
-    <div className='modal-box'>
-      
-    </div>
-  )
+  return <div className="modal-box"></div>;
 }
