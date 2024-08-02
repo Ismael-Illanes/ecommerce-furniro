@@ -1,0 +1,25 @@
+@import "./colors";
+
+.product-box {
+  width: 285px;
+  height: 446px;
+  display: flex;
+  flex-direction: column;
+  background-color: $productBG;
+  text-align: left;
+
+  & img {
+    margin-bottom: 10px;
+  }
+
+  & h1,
+  h3,
+  h4 {
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+  }
+
+  & h4 {
+    color: #898888;
+  }
+}
