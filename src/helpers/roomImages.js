@@ -1,6 +1,6 @@
-import dinningRoom from "../assets/Dinnig-Room.png";
-import livingRoom from "../assets/Livingroom.png";
-import bedRoom from "../assets/Bedroom.png";
+import dinningRoom from "../assets/Dinnig-Room.webp";
+import livingRoom from "../assets/Livingroom.webp";
+import bedRoom from "../assets/Bedroom.webp";
 const roomImages = {
   dinningRoom,
   livingRoom,

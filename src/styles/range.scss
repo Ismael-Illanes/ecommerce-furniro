@@ -35,14 +35,14 @@
   text-align: center;
 }
 
-@media (max-width: 1180px) {
-  .room-box {
+.room-box {
+  @media (max-width: 1180px) {
     grid-template-columns: repeat(2, auto);
   }
 }
 
-@media (max-width: 768px) {
-  .room-box {
+.room-box {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(1, auto);
   }
 }

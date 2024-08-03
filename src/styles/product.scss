@@ -5,21 +5,23 @@
   height: 446px;
   display: flex;
   flex-direction: column;
-  background-color: $productBG;
+  background-color: $product-background;
   text-align: left;
-
-  & img {
+  padding: 10px; 
+  
+  .product-image {
     margin-bottom: 10px;
   }
 
-  & h1,
-  h3,
-  h4 {
-    margin: 0px 0px 0px 20px;
-    padding: 0px;
+  .product-title,
+  .product-price,
+  .product-description {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
   }
 
-  & h4 {
+  .product-description {
     color: #898888;
   }
 }
