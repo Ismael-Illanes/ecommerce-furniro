@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 /* FRAMEWORKS */
-
 import { useTranslation } from "react-i18next";
 
 /* COMPONENTS */
@@ -15,16 +14,13 @@ import Range from "./components/Range";
 
 /* STYLES AND IMAGES */
 import "./styles/app.scss";
-import images from "./helpers/roomImages";
+
+/* CONSTANTS */
+import { lngs, rooms } from "./config/constants.js";
 
 /* #################################################### */
 
 function App() {
-  /* CONSTS */
-  const lngs = {
-    en: { nativeName: "English" },
-    es: { nativeName: " Spanish" },
-  };
   const { i18n } = useTranslation();
   const [products, setProducts] = useState([]);
 
@@ -67,9 +63,9 @@ function App() {
         <Modal />
       </Banner>
       <Range>
-        <RoomSelect imgSrc={images.dinningRoom} text="rooms.dining" />
-        <RoomSelect imgSrc={images.livingRoom} text="rooms.living" />
-        <RoomSelect imgSrc={images.bedRoom} text="rooms.bedroom" />
+        {rooms.map((room, index) => (
+          <RoomSelect key={index} imgSrc={room.imgSrc} text={room.text} />
+        ))}
       </Range>
       <Catalogue>
         {products.map((product) => (

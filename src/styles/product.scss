@@ -7,21 +7,21 @@
   flex-direction: column;
   background-color: $product-background;
   text-align: left;
-  padding: 10px; 
-  
-  .product-image {
+  padding: 10px;
+
+  & .__image {
     margin-bottom: 10px;
   }
 
-  .product-title,
-  .product-price,
-  .product-description {
+  & .__title,
+  & .__price,
+  & .__description {
     margin: 0;
     padding: 0;
     margin-left: 20px;
   }
 
-  .product-description {
+  & .__description {
     color: #898888;
   }
 }

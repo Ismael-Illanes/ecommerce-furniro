@@ -9,12 +9,21 @@ function Product({ id, name, description, price, image }) {
   return (
     <div className="product-box" id={id}>
       <picture>
-        <source srcSet={image} />
-        <img className="product-image" loading="lazy" src={image} alt={name} />
+        <source width={285} height={301} srcSet={image} />
+        <img
+          width={285}
+          height={301}
+          className="__image"
+          loading="lazy"
+          src={image}
+          alt={name}
+        />
       </picture>
-      <h1 className="product-title">{name}</h1>
-      <p className="product-description">{t(description)}</p>
-      <h3 className="product-price">{price !== null ? price : 'Price not available'}</h3>
+      <h1 className="__title">{name}</h1>
+      <p className="__description">{t(description)}</p>
+      <h3 className="__price">
+        {price !== null ? price : "Price not available"}
+      </h3>
     </div>
   );
 }
@@ -24,14 +33,14 @@ Product.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   price: PropTypes.number,
-  image: PropTypes.string
+  image: PropTypes.string,
 };
 
 Product.defaultProps = {
-  name: 'Unnamed Product',
-  description: 'default.description',
+  name: "Unnamed Product",
+  description: "default.description",
   price: null,
-  image: '/public/catalogue/Default.webp' 
+  image: "/public/catalogue/Default.webp",
 };
 
 export default Product;
