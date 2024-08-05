@@ -1,0 +1,17 @@
+@import "./colors";
+
+@mixin modalBox() {
+  width: 60px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50%;
+  border: 0.5px rgba(0, 0, 0, 0.15) solid;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-elements;
+  }
+}
