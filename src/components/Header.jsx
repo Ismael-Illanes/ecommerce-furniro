@@ -1,9 +1,11 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import "../styles/headerPage.scss";
 import headerImages from "../helpers/bannerImages.js";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   return (
     <div className="header-box">
       <div className="header-items-box">
@@ -13,16 +15,16 @@ export default function Header() {
         </div>
         <div className="header-text-box">
           <a>
-            <Trans i18nKey="nav.home">Home</Trans>
+            <Trans i18nKey="nav.home">{t("nav.home")}</Trans>
           </a>
           <a>
-            <Trans i18nKey="nav.shop">Shop</Trans>
+            <Trans i18nKey="nav.shop">{t("nav.shop")}</Trans>
           </a>
           <a>
-            <Trans i18nKey="nav.about">About</Trans>
+            <Trans i18nKey="nav.about">{t("nav.about")}</Trans>
           </a>
           <a>
-            <Trans i18nKey="nav.contact">Contact</Trans>
+            <Trans i18nKey="nav.contact">{t("nav.contact")}</Trans>
           </a>
         </div>
         <div className="header-icons-box">

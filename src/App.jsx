@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 /* FRAMEWORKS */
 
-import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+import { I18nextProvider } from "react-i18next";
 
 /* COMPONENTS */
 import Catalogue from "./components/Catalogue";
@@ -12,6 +13,7 @@ import Banner from "./components/Banner";
 import Modal from "./components/Modal";
 import RoomSelect from "./components/RoomSelect";
 import Range from "./components/Range";
+import Idioms from "./components/Idioms";
 
 /* STYLES AND IMAGES */
 import "./styles/app.scss";
@@ -21,14 +23,11 @@ import images from "./helpers/roomImages";
 
 function App() {
   /* CONSTS */
-  const lngs = {
-    en: { nativeName: "English" },
-    es: { nativeName: " Spanish" },
-  };
-  const { i18n } = useTranslation();
+
   const [products, setProducts] = useState([]);
 
   /* #################################################### */
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,36 +46,25 @@ function App() {
   }, []);
 
   return (
-    <div id="root">
-      <div>
-        {Object.keys(lngs).map((lng) => (
-          <button
-            key={lng}
-            style={{
-              fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-            }}
-            type="submit"
-            onClick={() => i18n.changeLanguage(lng)}
-          >
-            {lngs[lng].nativeName}
-          </button>
-        ))}
-      </div>
-      <Banner>
-        <Header />
+    <I18nextProvider i18n={i18n}>
+      <div id="root">
+        <Idioms />
+        <Banner>
+          <Header />
+        </Banner>
+        <Range>
+          <RoomSelect imgSrc={images.dinningRoom} text="rooms.dining" />
+          <RoomSelect imgSrc={images.livingRoom} text="rooms.living" />
+          <RoomSelect imgSrc={images.bedRoom} text="rooms.bedroom" />
+        </Range>
+        <Catalogue>
+          {products.map((product) => (
+            <Product key={product.id} {...product} />
+          ))}
+        </Catalogue>
         <Modal />
-      </Banner>
-      <Range>
-        <RoomSelect imgSrc={images.dinningRoom} text="rooms.dining" />
-        <RoomSelect imgSrc={images.livingRoom} text="rooms.living" />
-        <RoomSelect imgSrc={images.bedRoom} text="rooms.bedroom" />
-      </Range>
-      <Catalogue>
-        {products.map((product) => (
-          <Product key={product.id} {...product} />
-        ))}
-      </Catalogue>
-    </div>
+      </div>
+    </I18nextProvider>
   );
 }
 

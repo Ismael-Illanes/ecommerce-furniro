@@ -1,10 +1,84 @@
-/* @import './colors';
+@import "./colors";
+@import "./mixins";
+@import "./breakpoints";
 
-.modal-box{
-position: absolute;
-width: 443px;
-height: 343px;
-background-color: $secondary;
-left: 600px;
-top:250px;
-} */
+.modal-box {
+  position: fixed;
+  width: 60px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: calc(100% - 130px);
+  left: calc(100% - 70px);
+
+  .modal-box-sections {
+    @include modalBox();
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  .modal-box-arrow {
+    @include modalBox();
+  }
+
+  .modal-box-arrow__img {
+    z-index: -10;
+    pointer-events: none;
+  }
+}
+
+.header-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+
+  .header-box {
+    width: 100%;
+
+    .header-items-box {
+      width: 100%;
+    }
+  }
+}
+
+.header-overlay-container__text {
+  height: 50%;
+  margin-top: 10rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.heaver-overlay-links {
+  border: 1px $product-background solid;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    background-color: $hover-elements;
+  }
+}
+.header-overlay {
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
