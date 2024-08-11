@@ -9,19 +9,19 @@
   text-align: left;
   padding: 10px;
 
-  & .__image {
+  &__image {
     margin-bottom: 10px;
   }
 
-  & .__title,
-  & .__price,
-  & .__description {
+  &__title,
+  &__price,
+  &__description {
     margin: 0;
     padding: 0;
     margin-left: 20px;
   }
 
-  & .__description {
+  &__description {
     color: #898888;
   }
 }
