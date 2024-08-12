@@ -1,34 +1,34 @@
 import React from "react";
+import { Trans } from "react-i18next";
 import "../styles/headerPage.scss";
 import headerImages from "../helpers/bannerImages.js";
+import { iconLinks, navLinks } from "../config/constants.js";
 
-export default function header() {
+export default function Header() {
   return (
     <div className="header-box">
       <div className="header-items-box">
         <div className="header-logo-box">
-          <img src={headerImages.meubelHouseLogo}></img>
-          <img src={headerImages.skinClinicLogo}></img>
+          <img src={headerImages.meubelHouseLogo} alt="Meubel House" />
+          <img src={headerImages.skinClinicLogo} alt="Skin Clinic" />
         </div>
         <div className="header-text-box">
-          <a>Home</a>
-          <a>Shop</a>
-          <a>About</a>
-          <a>Contact</a>
+          {navLinks.map((link) => (
+            <a
+              key={link.key}
+              className="header-text-box__link"
+              href={link.href}
+            >
+              <Trans i18nKey={link.key}>{link.defaultText}</Trans>
+            </a>
+          ))}
         </div>
         <div className="header-icons-box">
-          <a>
-            <img src={headerImages.alertsIcon}></img>
-          </a>
-          <a>
-            <img src={headerImages.searchIcon}></img>
-          </a>
-          <a>
-            <img src={headerImages.heartIcon}></img>
-          </a>
-          <a>
-            <img src={headerImages.cartIcon}></img>
-          </a>
+          {iconLinks.map((icon, index) => (
+            <a key={index} href={icon.href}>
+              <img width={24} height={24} src={icon.src} alt={icon.alt} />
+            </a>
+          ))}
         </div>
       </div>
     </div>

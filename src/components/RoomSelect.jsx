@@ -1,16 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/roomSelect.scss";
+import { useTranslation } from "react-i18next";
 
 const RoomSelect = ({ imgSrc, text }) => {
+  const { t } = useTranslation();
+
   if (!imgSrc || !text) {
     throw new Error("imgSrc and text props are required");
   }
 
   return (
     <div className="room-box-select">
-      <img src={imgSrc} alt="Room" />
-      <h3>{text}</h3>
+      <picture>
+        <source srcSet={imgSrc} width={381} height={480} />
+        <img
+          width={381}
+          height={480}
+          loading="lazy"
+          src={imgSrc}
+          alt={t(text)}
+        />
+      </picture>
+      <h3>{t(text)}</h3>
     </div>
   );
 };
