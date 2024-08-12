@@ -1,5 +1,6 @@
 import roomImages from "../helpers/roomImages";
 import headerImages from "../helpers/bannerImages";
+import iconsCTA from "../helpers/CTAImages";
 
 /* APP CONSTS */
 
@@ -28,4 +29,27 @@ export const navLinks = [
   { key: "nav.shop", defaultText: "Shop", href: "#" },
   { key: "nav.about", defaultText: "About", href: "#" },
   { key: "nav.contact", defaultText: "Contact", href: "#" },
+];
+
+/* PRODUCT CONSTS */
+
+export const overlayLinks = [
+  {
+    imgSrc: iconsCTA.shareIcon,
+    alt: "Share",
+    href: "#",
+    text: "CTA.action2",
+  },
+  {
+    imgSrc: iconsCTA.compareIcon,
+    alt: "Compare",
+    href: "#",
+    text: "CTA.action3",
+  },
+  {
+    imgSrc: iconsCTA.likeIcon,
+    alt: "Like",
+    href: "#",
+    text: "CTA.action4",
+  },
 ];

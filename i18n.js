@@ -41,6 +41,12 @@ i18n
             product7: "Stylish office desk",
             product8: "Contemporary floor lamp",
           },
+          CTA: {
+            action1: "Add to cart",
+            action2: "Share",
+            action3: "Compare",
+            action4: "Like",
+          },
           default: {
             description: "No description available",
           },
@@ -73,6 +79,12 @@ i18n
             product6: "Sofá de cuero cómodo",
             product7: "Escritorio de oficina elegante",
             product8: "Lámpara de suelo contemporánea",
+          },
+          CTA: {
+            action1: "Añadir al carrito",
+            action2: "Compartir",
+            action3: "Comparar",
+            action4: "Me gusta",
           },
           default: {
             description: "Descripción no disponible",
