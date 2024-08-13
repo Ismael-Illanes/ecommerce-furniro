@@ -21,7 +21,7 @@ i18n
             about: "About",
             contact: "Contact",
           },
-          tittles: {
+          titles: {
             part1: "Our Products",
             part2: "Browse the Range",
             part3: "We treat the skin with care.",
@@ -54,7 +54,7 @@ i18n
             about: "Acerca de",
             contact: "Contacto",
           },
-          tittles: {
+          titles: {
             part1: "Nuestros productos",
             part2: "Nuestra gama",
             part3: "Tratamos la piel con cuidado.",
