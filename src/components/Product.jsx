@@ -9,12 +9,19 @@ function Product({ id, name, description, price, image }) {
   return (
     <div className="product-box" id={id}>
       <picture>
-        <source srcSet={image} />
-        <img className="product-image" loading="lazy" src={image} alt={name} />
+        <source width={285} height={301} srcSet={image} />
+        <img
+          width={285}
+          height={301}
+          className="product-box__image"
+          loading="lazy"
+          src={image}
+          alt={name}
+        />
       </picture>
-      <h1 className="product-title">{name}</h1>
-      <p className="product-description">{t(description)}</p>
-      <h3 className="product-price">
+      <h1 className="product-box__title">{name}</h1>
+      <p className="product-box__description">{t(description)}</p>
+      <h3 className="product-box__price">
         {price !== null ? price : "Price not available"}
       </h3>
     </div>

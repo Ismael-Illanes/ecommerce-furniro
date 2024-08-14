@@ -13,8 +13,14 @@ const RoomSelect = ({ imgSrc, text }) => {
   return (
     <div className="room-box-select">
       <picture>
-        <source srcSet={imgSrc} />
-        <img loading="lazy" src={imgSrc} alt={t(text)} />
+        <source srcSet={imgSrc} width={381} height={480} />
+        <img
+          width={381}
+          height={480}
+          loading="lazy"
+          src={imgSrc}
+          alt={t(text)}
+        />
       </picture>
       <h3>{t(text)}</h3>
     </div>

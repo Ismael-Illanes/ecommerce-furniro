@@ -9,19 +9,19 @@
   text-align: left;
   padding: 10px;
 
-  .product-image {
+  &__image {
     margin-bottom: 10px;
   }
 
-  .product-title,
-  .product-price,
-  .product-description {
+  &__title,
+  &__price,
+  &__description {
     margin: 0;
     padding: 0;
     margin-left: 20px;
   }
 
-  .product-description {
+  &__description {
     color: #898888;
   }
 }

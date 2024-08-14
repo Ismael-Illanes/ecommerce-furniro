@@ -13,11 +13,9 @@
   width: 100%;
   height: 76.71px;
   margin-bottom: 50px;
-
-  & h1,
-  p {
-    text-align: center;
-  }
+}
+.range-box-text__info {
+  text-align: center;
 }
 
 .room-box {
@@ -39,9 +37,6 @@
   @media (max-width: 1180px) {
     grid-template-columns: repeat(2, auto);
   }
-}
-
-.room-box {
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, auto);
   }

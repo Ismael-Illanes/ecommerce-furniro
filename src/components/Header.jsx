@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation, Trans } from "react-i18next";
 import "../styles/headerPage.scss";
 import headerImages from "../helpers/bannerImages.js";
+import { iconLinks, navLinks } from "../config/constants.js";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -14,32 +15,22 @@ export default function Header() {
           <img src={headerImages.skinClinicLogo} alt="Skin Clinic" />
         </div>
         <div className="header-text-box">
-          <a>
-            <Trans i18nKey="nav.home">{t("nav.home")}</Trans>
-          </a>
-          <a>
-            <Trans i18nKey="nav.shop">{t("nav.shop")}</Trans>
-          </a>
-          <a>
-            <Trans i18nKey="nav.about">{t("nav.about")}</Trans>
-          </a>
-          <a>
-            <Trans i18nKey="nav.contact">{t("nav.contact")}</Trans>
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.key}
+              className="header-text-box__link"
+              href={link.href}
+            >
+              <Trans i18nKey={link.key}>{link.defaultText}</Trans>
+            </a>
+          ))}
         </div>
         <div className="header-icons-box">
-          <a>
-            <img src={headerImages.alertsIcon} alt="Alerts" />
-          </a>
-          <a>
-            <img src={headerImages.searchIcon} alt="Search" />
-          </a>
-          <a>
-            <img src={headerImages.heartIcon} alt="Heart" />
-          </a>
-          <a>
-            <img src={headerImages.cartIcon} alt="Cart" />
-          </a>
+          {iconLinks.map((icon, index) => (
+            <a key={index} href={icon.href}>
+              <img width={24} height={24} src={icon.src} alt={icon.alt} />
+            </a>
+          ))}
         </div>
       </div>
     </div>
