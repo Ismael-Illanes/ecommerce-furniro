@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import headerImages from "../helpers/bannerImages.js";
 import { useTranslation } from "react-i18next";
 import {
-  getColor,
+  getColorFromRootStyles,
   handleScroll,
   handleClickOutside,
   scrollToTop,
@@ -22,7 +22,7 @@ export default function Modal() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    setPrimaryColor(getColor("--primary"));
+    setPrimaryColor(getColorFromRootStyles("--primary"));
     const scrollHandler = () => handleScroll(setShowArrow);
 
     /* Every time user moves through page 'scrollHandler'' ejecutes */
@@ -42,14 +42,14 @@ export default function Modal() {
   return (
     <>
       <div className="modal-box">
-        <div className="modal-box-sections" onClick={toggleHeader}>
+        <div className="modal-box__sections" onClick={toggleHeader}>
           <GiHamburgerMenu color={primaryColor} size={30} />
         </div>
         {showArrow && (
-          <div onClick={scrollToTop} className="modal-box-arrow">
+          <div onClick={scrollToTop} className="modal-box__arrow">
             <FaArrowUp
               color={primaryColor}
-              className="modal-box-arrow__img"
+              className="modal-box-__arrow-img"
               size={30}
             />
           </div>
@@ -57,21 +57,21 @@ export default function Modal() {
       </div>
       {showHeader && (
         <div className="header-overlay" ref={overlayRef}>
-          <div className="header-overlay-container__img">
+          <div className="header-overlay__img">
             <img src={headerImages.meubelHouseLogo} alt="Meubel House Logo" />
             <img src={headerImages.skinClinicLogo} alt="Skin Clinic Logo" />
           </div>
-          <div className="header-overlay-container__text">
-            <a className="heaver-overlay-links" href="#">
+          <div className="header-overlay__textbox">
+            <a className="heaver-overlay__textbox--links" href="#">
               <h1>{t("nav.home")}</h1>
             </a>
-            <a className="heaver-overlay-links" href="#">
+            <a className="heaver-overlay__textbox--links" href="#">
               <h1>{t("nav.shop")}</h1>
             </a>
-            <a className="heaver-overlay-links" href="#">
+            <a className="heaver-overlay__textbox--links" href="#">
               <h1>{t("nav.about")}</h1>
             </a>
-            <a className="heaver-overlay-links" href="#">
+            <a className="heaver-overlay__textbox--links" href="#">
               <h1>{t("nav.contact")}</h1>
             </a>
           </div>

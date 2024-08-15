@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/idioms.scss";
+import "../styles/languages.scss";
 
 import { useTranslation } from "react-i18next";
 
-export default function Idioms() {
+export default function Languages() {
   const lngs = {
     en: { nativeName: "EN" },
     es: { nativeName: " ES" },
@@ -11,11 +11,11 @@ export default function Idioms() {
   const { i18n } = useTranslation();
 
   return (
-    <div className="idioms-box">
+    <div className="languages-box">
       {Object.keys(lngs).map((lng) => (
         <button
           key={lng}
-          className="idioms-button"
+          className="languages-box__btn"
           style={{
             fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
           }}

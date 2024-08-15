@@ -7,7 +7,7 @@ export default function Catalogue({ children }) {
 
   return (
     <div className="catalogue-box">
-      <h1 className="catalogue-title">
+      <h1 className="catalogue-box__title">
         <Trans i18nKey="titles.part1">{t()} Our Products</Trans>
       </h1>
       <div className="products-box">{children}</div>

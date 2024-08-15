@@ -1,5 +1,6 @@
 $mobile: 480px;
 $desktop: 1024px;
+$until-desktop: 1025px;
 $large-desktop: 1440px;
 /* ---------------------------------------- */
 
@@ -11,6 +12,12 @@ $large-desktop: 1440px;
 
 @mixin desktop {
   @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin until-desktop {
+  @media (min-width: $until-desktop) {
     @content;
   }
 }

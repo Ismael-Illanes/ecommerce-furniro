@@ -11,8 +11,8 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Modal from "./components/Modal";
 import RoomSelect from "./components/RoomSelect";
-import Range from "./components/Range";
-import Idioms from "./components/Idioms";
+import AreaPicker from "./components/AreaPicker";
+import Languages from "./components/Languages";
 
 /* STYLES AND IMAGES */
 import "./styles/app.scss";
@@ -49,15 +49,15 @@ function App() {
   return (
     <I18nextProvider i18n={i18n}>
       <div id="root">
-        <Idioms />
+        <Languages />
         <Banner>
           <Header />
         </Banner>
-        <Range>
+        <AreaPicker>
           {rooms.map((room, index) => (
             <RoomSelect key={index} imgSrc={room.imgSrc} text={room.text} />
           ))}
-        </Range>
+        </AreaPicker>
         <Catalogue>
           {products.map((product) => (
             <Product key={product.id} {...product} />

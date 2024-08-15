@@ -4,7 +4,7 @@ import { useEffect } from "react";
  * Accesses the computed styles of the :root element, which includes all the CSS variables defined at the root level.
  * @returns {string} The primary color value.
  */
-export const getColor = (color) => {
+export const getColorFromRootStyles = (color) => {
   const rootStyles = getComputedStyle(document.documentElement);
 
   return rootStyles.getPropertyValue(`${color}`);
