@@ -62,16 +62,16 @@ export default function Modal() {
             <img src={headerImages.skinClinicLogo} alt="Skin Clinic Logo" />
           </div>
           <div className="header-overlay__textbox">
-            <a className="heaver-overlay__textbox--links" href="#">
+            <a className="heaver-overlay__links" href="#">
               <h1>{t("nav.home")}</h1>
             </a>
-            <a className="heaver-overlay__textbox--links" href="#">
+            <a className="heaver-overlay__links" href="#">
               <h1>{t("nav.shop")}</h1>
             </a>
-            <a className="heaver-overlay__textbox--links" href="#">
+            <a className="heaver-overlay__links" href="#">
               <h1>{t("nav.about")}</h1>
             </a>
-            <a className="heaver-overlay__textbox--links" href="#">
+            <a className="heaver-overlay__links" href="#">
               <h1>{t("nav.contact")}</h1>
             </a>
           </div>

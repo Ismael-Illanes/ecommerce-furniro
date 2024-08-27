@@ -28,7 +28,13 @@ export default function Header() {
         <div className="header-box__icons">
           {iconLinks.map((icon, index) => (
             <a key={index} href={icon.href}>
-              <img width={24} height={24} src={icon.src} alt={icon.alt} />
+              <img
+                className="header-box__img"
+                width={24}
+                height={24}
+                src={icon.src}
+                alt={icon.alt}
+              />
             </a>
           ))}
         </div>

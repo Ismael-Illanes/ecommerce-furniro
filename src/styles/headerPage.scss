@@ -56,26 +56,11 @@
     @include desktop {
       display: none;
     }
+  }
 
-    & img {
-      max-height: 24px;
-    }
+  &__img {
+    max-height: 24px;
+    max-width: 24px;
   }
+  
 }
-
-/* 
-@include desktop {
-  .header-text-box {
-    display: none;
-  }
-  .header-icons-box {
-    display: none;
-  }
-  .header-logo-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
- */
