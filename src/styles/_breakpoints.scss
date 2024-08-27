@@ -1,6 +1,6 @@
 $mobile: 480px;
-$tablet: 768px;
 $desktop: 1024px;
+$until-desktop: 1025px;
 $large-desktop: 1440px;
 /* ---------------------------------------- */
 
@@ -10,14 +10,14 @@ $large-desktop: 1440px;
   }
 }
 
-@mixin tablet {
-  @media (min-width: $tablet) and (max-width: $desktop) {
+@mixin desktop {
+  @media (max-width: $desktop) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media (max-width: $desktop) {
+@mixin until-desktop {
+  @media (min-width: $until-desktop) {
     @content;
   }
 }

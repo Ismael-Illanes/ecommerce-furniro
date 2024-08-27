@@ -1,32 +1,40 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import "../styles/headerPage.scss";
 import headerImages from "../helpers/bannerImages.js";
 import { iconLinks, navLinks } from "../config/constants.js";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   return (
     <div className="header-box">
-      <div className="header-items-box">
-        <div className="header-logo-box">
+      <div className="header-box__items">
+        <div className="header-box__logo">
           <img src={headerImages.meubelHouseLogo} alt="Meubel House" />
           <img src={headerImages.skinClinicLogo} alt="Skin Clinic" />
         </div>
-        <div className="header-text-box">
+        <div className="header-box__text">
           {navLinks.map((link) => (
             <a
               key={link.key}
-              className="header-text-box__link"
+              className="header-box__text--link"
               href={link.href}
             >
               <Trans i18nKey={link.key}>{link.defaultText}</Trans>
             </a>
           ))}
         </div>
-        <div className="header-icons-box">
+        <div className="header-box__icons">
           {iconLinks.map((icon, index) => (
             <a key={index} href={icon.href}>
-              <img width={24} height={24} src={icon.src} alt={icon.alt} />
+              <img
+                className="header-box__img"
+                width={24}
+                height={24}
+                src={icon.src}
+                alt={icon.alt}
+              />
             </a>
           ))}
         </div>

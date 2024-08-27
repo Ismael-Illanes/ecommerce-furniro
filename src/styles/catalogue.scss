@@ -8,11 +8,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &__title {
+    margin-bottom: 30px;
+  }
 }
 
-.catalogue-title {
-  margin-bottom: 30px;
-}
 .products-box {
   max-height: fit-content;
   width: 100%;
