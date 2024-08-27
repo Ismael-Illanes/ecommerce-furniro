@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/catalogue.scss";
 import { Trans, useTranslation } from "react-i18next";
 

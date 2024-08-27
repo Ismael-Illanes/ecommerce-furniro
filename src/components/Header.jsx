@@ -1,12 +1,9 @@
-import React from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans } from "react-i18next";
 import "../styles/headerPage.scss";
 import headerImages from "../helpers/bannerImages.js";
 import { iconLinks, navLinks } from "../config/constants.js";
 
 export default function Header() {
-  const { t } = useTranslation();
-
   return (
     <div className="header-box">
       <div className="header-box__items">

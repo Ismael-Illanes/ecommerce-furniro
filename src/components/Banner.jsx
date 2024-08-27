@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/banner.scss";
 import images from "../helpers/bannerImages.js";
 

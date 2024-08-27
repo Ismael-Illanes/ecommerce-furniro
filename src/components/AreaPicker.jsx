@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/areaPicker.scss";
 import { Trans } from "react-i18next";
 

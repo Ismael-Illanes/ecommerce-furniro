@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 /* FRAMEWORKS */
 import { useTranslation, I18nextProvider } from "react-i18next";
-import i18n from "../i18n";
 
 /* COMPONENTS */
 import Catalogue from "./components/Catalogue";
