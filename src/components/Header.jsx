@@ -34,17 +34,23 @@ export default function Header() {
           {navLinks.map((link) => (
             <a
               key={link.key}
-              className="header-text-box__link"
+              className="header-box__text--link"
               href={link.href}
             >
               <Trans i18nKey={link.key}>{link.defaultText}</Trans>
             </a>
           ))}
         </div>
-        <div className="header-icons-box">
+        <div className="header-box__icons">
           {iconLinks.map((icon, index) => (
             <a key={index} href={icon.href}>
-              <img width={24} height={24} src={icon.src} alt={icon.alt} />
+              <img
+                className="header-box__img"
+                width={24}
+                height={24}
+                src={icon.src}
+                alt={icon.alt}
+              />
             </a>
           ))}
         </div>
