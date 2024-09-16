@@ -6,8 +6,8 @@ import { iconLinks, navLinks } from "../config/constants.js";
 export default function Header() {
   return (
     <div className="header-box">
-      <div className="header-items-box">
-        <div className="header-logo-box">
+      <div className="header-box__items">
+        <div className="header-box__logo">
           <picture>
             <source srcSet={headerImages.meubelHouseLogo} />
             <img
@@ -30,7 +30,7 @@ export default function Header() {
           </picture>
         </div>
 
-        <div className="header-text-box">
+        <div className="header-box__text">
           {navLinks.map((link) => (
             <a
               key={link.key}
