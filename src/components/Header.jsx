@@ -8,9 +8,28 @@ export default function Header() {
     <div className="header-box">
       <div className="header-box__items">
         <div className="header-box__logo">
-          <img src={headerImages.meubelHouseLogo} alt="Meubel House" />
-          <img src={headerImages.skinClinicLogo} alt="Skin Clinic" />
+          <picture>
+            <source srcSet={headerImages.meubelHouseLogo} />
+            <img
+              src={headerImages.meubelHouseLogo}
+              width={50}
+              height={33}
+              alt="House logo"
+              title="Icon logo"
+            />
+          </picture>
+          <picture>
+            <source srcSet={headerImages.skinClinicLogo} />
+            <img
+              src={headerImages.skinClinicLogo}
+              width={127}
+              height={28}
+              alt="Text Logo"
+              title="Logo"
+            />
+          </picture>
         </div>
+
         <div className="header-box__text">
           {navLinks.map((link) => (
             <a
