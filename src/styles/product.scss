@@ -55,41 +55,38 @@
     justify-content: space-between;
     align-items: center;
     display: none;
-  }
+    &__list {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+    }
+    &__link {
+      text-decoration: none;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5px;
+      cursor: pointer;
+    }
+    &__icon {
+      display: block;
+    }
 
-  &__CTA-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-  }
+    &__btn {
+      width: 202px;
+      height: 48px;
+      color: $primary;
+      font-weight: bolder;
+      font-size: medium;
+      cursor: pointer;
+    }
 
-  &__CTA-link {
-    text-decoration: none;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5px;
-    cursor: pointer;
-  }
-
-  &__CTA--es {
-    font-size: small;
-  }
-
-  &__CTA-icon {
-    display: block;
-  }
-
-  &__CTA-btn {
-    width: 202px;
-    height: 48px;
-    color: $primary;
-    font-weight: bolder;
-    font-size: medium;
-    cursor: pointer;
+    &__es {
+      font-size: small;
+    }
   }
 }

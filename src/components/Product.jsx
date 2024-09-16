@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useTranslation, Trans } from "react-i18next";
 
@@ -43,20 +43,20 @@ function Product({ id, name, description, price, image }) {
       </h3>
       <div className="product-box__overlay">
         <div
-          className={`product-box__CTA ${isSpanish ? "product-box__CTA--es" : ""}`}
+          className={`product-box__CTA ${isSpanish ? "product-box__CTA__es" : ""}`}
         >
-          <button className="product-box__CTA-btn">
+          <button className="product-box__CTA__btn">
             <Trans i18nKey="CTA.action1">Add to cart</Trans>
           </button>
-          <ul className="product-box__CTA-list">
+          <ul className="product-box__CTA__list">
             {overlayLinks.map((CTA, index) => (
-              <li className="product-box__CTA-item" key={index}>
+              <li className="product-box__CTA__item" key={index}>
                 <span>
-                  <a href={CTA.href} className="product-box__CTA-link">
+                  <a href={CTA.href} className="product-box__CTA__link">
                     <picture>
                       <source srcSet={CTA.imgSrc} />
                       <img
-                        className="product-box__CTA-icon"
+                        className="product-box__CTA__icon"
                         src={CTA.imgSrc}
                         alt={CTA.alt}
                       />

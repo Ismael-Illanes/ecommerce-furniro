@@ -1,4 +1,3 @@
-import React from "react";
 import { Trans } from "react-i18next";
 import "../styles/headerPage.scss";
 import headerImages from "../helpers/bannerImages.js";
@@ -9,9 +8,28 @@ export default function Header() {
     <div className="header-box">
       <div className="header-items-box">
         <div className="header-logo-box">
-          <img src={headerImages.meubelHouseLogo} alt="Meubel House" />
-          <img src={headerImages.skinClinicLogo} alt="Skin Clinic" />
+          <picture>
+            <source srcSet={headerImages.meubelHouseLogo} />
+            <img
+              src={headerImages.meubelHouseLogo}
+              width={50}
+              height={33}
+              alt="House logo"
+              title="Icon logo"
+            />
+          </picture>
+          <picture>
+            <source srcSet={headerImages.skinClinicLogo} />
+            <img
+              src={headerImages.skinClinicLogo}
+              width={127}
+              height={28}
+              alt="Text Logo"
+              title="Logo"
+            />
+          </picture>
         </div>
+
         <div className="header-text-box">
           {navLinks.map((link) => (
             <a
