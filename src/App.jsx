@@ -12,6 +12,7 @@ import Modal from "./components/Modal";
 import RoomSelect from "./components/RoomSelect";
 import AreaPicker from "./components/AreaPicker";
 import Languages from "./components/Languages";
+import ExploreMoreSection from "./components/ExploreMoreSection.jsx";
 
 /* STYLES AND IMAGES */
 import "./styles/app.scss";
@@ -63,6 +64,7 @@ function App() {
           ))}
         </Catalogue>
         <Modal />
+        <ExploreMoreSection />
       </div>
     </I18nextProvider>
   );
