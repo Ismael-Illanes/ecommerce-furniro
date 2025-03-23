@@ -1,5 +1,5 @@
-import carouselImages from "../helpers/carouselImages";
 import "../styles/exploreSection.scss";
+import SimpleSlider from "./Slider/Slider";
 
 export default function ExploreMoreSection() {
   return (
@@ -15,15 +15,7 @@ export default function ExploreMoreSection() {
           <button className="explore-section__content__text__btn">Explore More</button>
         </div>
         <div className="explore-section__content__images">
-          <picture>
-            <source srcSet={carouselImages.carousel1} width={"375px"} height={"500px"} />
-            <img
-              src={carouselImages.carousel1}
-              width="100%"
-              height="100%"
-              alt="Banner"
-            />
-          </picture>
+          <SimpleSlider />
         </div>
       </div>
     </div>

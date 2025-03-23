@@ -12,9 +12,11 @@
   gap: 10px;
   top: calc(100% - 130px);
   left: calc(100% - 70px);
+  z-index: 9999;
 
   &__sections {
     @include modal-box();
+
     @include until-desktop {
       display: none;
     }
@@ -62,8 +64,6 @@
 }
 
 .heaver-overlay__links {
-  border: 1px $product-background solid;
-  border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   color: black;
